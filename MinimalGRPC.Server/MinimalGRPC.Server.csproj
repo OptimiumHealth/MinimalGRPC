@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="gRPCClient\**" />
+	  <Content Remove="gRPCClient\**" />
+	  <EmbeddedResource Remove="gRPCClient\**" />
+	  <None Remove="gRPCClient\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Google.Protobuf" Version="3.19.4" />
+		<PackageReference Include="Grpc.AspNetCore" Version="2.43.0" />
+		<PackageReference Include="Grpc.AspNetCore.Server.Reflection" Version="2.43.0" />
+		<PackageReference Include="Grpc.AspNetCore.Web" Version="2.43.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Forms" Version="6.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\MinimalGRPC.Client\MinimalGRPC.Client.csproj" />
+	</ItemGroup>
+
+</Project>

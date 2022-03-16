@@ -1,4 +1,4 @@
-#define xSSL
+#define SSL
 #define xnet31
 
 #if net31
@@ -57,7 +57,7 @@ namespace MinimalGRPC
             services.AddServerSideBlazor();
 
 #if SSL
-            var baseUri = "https://localhost:44324";
+            var baseUri = "https://localhost:44319";
 #else
             var baseUri = "http://localhost:45958";
 
