@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
-
-using Grpc.Core;
-
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+﻿using Grpc.Core;
 
 using MinimalGRPC.gRPCClient;
+
+using System;
+using System.Threading.Tasks;
 
 //
 //  2021-06-14  Mark Stega
 //              Created
 //
 
-namespace Optimiser.Web.Services
+namespace MinimalGRPC.Services
 {
     public class WeatherService : WeatherProto.WeatherProtoBase
     {
         #region GetWeatherForecast
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -43,7 +37,7 @@ namespace Optimiser.Web.Services
             }
             return Task.FromResult(reply);
         }
-        #endregion
 
+        #endregion
     }
 }

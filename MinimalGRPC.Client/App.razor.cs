@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace MinimalGRPC.gRPCClient
+namespace MinimalGRPC
 {
     public partial class App
     {

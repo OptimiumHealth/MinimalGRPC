@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,103 +7,28 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="App.razor" />
     <None Remove="gRPCClient\weatherProto.proto" />
-    <None Remove="Shared\MainLayout.razor" />
-    <None Remove="Shared\NavMenu.razor" />
-    <None Remove="Views\FetchData.razor" />
-    <None Remove="Views\Index.razor" />
-    <None Remove="wwwroot\css\bootstrap\bootstrap.min.css" />
-    <None Remove="wwwroot\css\bootstrap\bootstrap.min.css.map" />
-    <None Remove="wwwroot\css\open-iconic\FONT-LICENSE" />
-    <None Remove="wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css" />
-    <None Remove="wwwroot\css\open-iconic\font\fonts\open-iconic.eot" />
-    <None Remove="wwwroot\css\open-iconic\font\fonts\open-iconic.otf" />
-    <None Remove="wwwroot\css\open-iconic\font\fonts\open-iconic.svg" />
-    <None Remove="wwwroot\css\open-iconic\font\fonts\open-iconic.ttf" />
-    <None Remove="wwwroot\css\open-iconic\font\fonts\open-iconic.woff" />
-    <None Remove="wwwroot\css\open-iconic\ICON-LICENSE" />
-    <None Remove="wwwroot\css\open-iconic\README.md" />
-    <None Remove="wwwroot\css\site.css" />
-    <None Remove="wwwroot\favicon.ico" />
-    <None Remove="_Imports.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="App.razor" />
-    <Content Include="Shared\MainLayout.razor" />
-    <Content Include="Shared\NavMenu.razor" />
-    <Content Include="Views\FetchData.razor" />
-    <Content Include="Views\Index.razor" />
-    <Content Include="wwwroot\css\bootstrap\bootstrap.min.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="wwwroot\css\bootstrap\bootstrap.min.css.map">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="wwwroot\css\open-iconic\FONT-LICENSE">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="wwwroot\css\open-iconic\font\fonts\open-iconic.eot">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="wwwroot\css\open-iconic\font\fonts\open-iconic.otf">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="wwwroot\css\open-iconic\font\fonts\open-iconic.svg">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="wwwroot\css\open-iconic\font\fonts\open-iconic.ttf">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="wwwroot\css\open-iconic\font\fonts\open-iconic.woff">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="wwwroot\css\open-iconic\ICON-LICENSE">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="wwwroot\css\open-iconic\README.md">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="wwwroot\css\site.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="wwwroot\favicon.ico">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="_Imports.razor" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.19.4" />
-    <PackageReference Include="Grpc.Net.Client" Version="2.43.0" />
-    <PackageReference Include="Grpc.Net.Client.Web" Version="2.43.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.44.0" />
+    <PackageReference Include="Grpc.Net.Client.Web" Version="2.44.0" />
     <PackageReference Include="Grpc.Tools" Version="2.44.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Protobuf Include="gRPCClient\weatherProto.proto" />
   </ItemGroup>
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
 
 </Project>

@@ -1,9 +1,4 @@
-﻿using MinimalGRPC.Data;
-
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
-namespace MinimalGRPC.gRPCClient
+﻿namespace MinimalGRPC
 {
     public interface IWeatherClient
     {

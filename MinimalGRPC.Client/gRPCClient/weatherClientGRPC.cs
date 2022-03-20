@@ -1,4 +1,4 @@
-﻿using MinimalGRPC.Data;
+﻿using MinimalGRPC;
 
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 //  2021-06-14  Mark Stega
 //
 
-namespace MinimalGRPC.gRPCClient
+namespace MinimalGRPC
 {
     public class weatherClientGRPC : IWeatherClient
     {

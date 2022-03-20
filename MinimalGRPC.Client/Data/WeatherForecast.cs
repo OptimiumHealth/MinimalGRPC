@@ -1,6 +1,4 @@
-using System;
-
-namespace MinimalGRPC.Data
+namespace MinimalGRPC
 {
     public class WeatherForecast
     {
