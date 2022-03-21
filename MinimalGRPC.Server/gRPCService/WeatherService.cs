@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 //              Created
 //
 
-namespace MinimalGRPC.Services
+namespace MinimalGRPC
 {
     public class WeatherService : WeatherProto.WeatherProtoBase
     {

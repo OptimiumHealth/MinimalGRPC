@@ -1,18 +1,10 @@
 #define SERVER
 
-using Grpc.Net.Client;
-using Grpc.Net.Client.Web;
-
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
-using MinimalGRPC.gRPCClient;
-using MinimalGRPC.Services;
-
-using System.Net.Http;
 
 namespace MinimalGRPC
 {
